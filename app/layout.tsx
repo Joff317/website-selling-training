@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import PageContainer from "@/components/PageContainer";
+import AuthProvider from "@/providers/AuthProvider";
 // import Header from "./components/Header";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -20,13 +21,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="flex flex-col justify-between min-h-screen">
-          <PageContainer>
-            <Header />
-          </PageContainer>
-          {/* flex grow = pour que les composant prennent le maximum de place sur l'écran */}
-          <div className="flex-grow">{children}</div>
-        </div>
+        <AuthProvider>
+          <div className="flex flex-col justify-between min-h-screen">
+            <PageContainer>
+              <Header />
+            </PageContainer>
+            {/* flex grow = pour que les composant prennent le maximum de place sur l'écran */}
+            <div className="flex-grow">{children}</div>
+          </div>
+        </AuthProvider>
       </body>
     </html>
   );
