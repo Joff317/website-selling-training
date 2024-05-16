@@ -3,6 +3,7 @@ import Link from "next/link";
 import HeaderNavigation from "./HeaderNavigation";
 import PageContainer from "./PageContainer";
 import ResponsiveMenu from "./ResponsiveMenu";
+import ProfileButton from "./ProfileButton";
 
 export default function Header() {
   const href = "/";
@@ -38,8 +39,7 @@ export default function Header() {
           {/* Buttons */}
           <div className="flex justify-center gap-2">
             {/* Toggle */}
-            {/* <ToggleTheme />
-            <ProfileButton /> */}
+            <ProfileButton />
           </div>
         </div>
       </PageContainer>

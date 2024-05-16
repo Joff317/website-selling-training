@@ -16,20 +16,15 @@ export default function HeaderNavigation() {
       <NavigationMenuList className="gap-4">
         <NavigationMenuItem>
           <Link href="/sell" legacyBehavior passHref>
-            <NavigationMenuLink className="max-md:hidden" >Vendre</NavigationMenuLink>
+            <NavigationMenuLink className="max-md:hidden">
+              Vendre
+            </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
           <Link href="/buy" legacyBehavior passHref>
             <NavigationMenuLink className="max-md:hidden">
               Acheter
-            </NavigationMenuLink>
-          </Link>
-        </NavigationMenuItem>
-        <NavigationMenuItem>
-          <Link href="/login" legacyBehavior passHref>
-            <NavigationMenuLink className="max-md:hidden">
-              Login
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
